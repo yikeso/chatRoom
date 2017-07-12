@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>dspay.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<style type="text/css">
+		.btn
+		{
+			background-image: url('img/打赏.png');
+		}
+	</style>
+	<script type="text/javascript">
+	  function showImg() {
+		document.getElementById("pay").src="" ;
+		
+		
+	}
+	</script>
+  </head>
+  <body>
+   	<button class="btn" onclick="showImg();" style="width: 67px; "></button>
+   	<div id="showImg">
+   	  <img id="pay" src="" />
+   	</div>
+  </body>
+</html>

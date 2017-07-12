@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/1018online/1018online.iml" filepath="$PROJECT_DIR$/1018online/1018online.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tomcat1-Websocket/Tomcat1-Websocket.iml" filepath="$PROJECT_DIR$/Tomcat1-Websocket/Tomcat1-Websocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatRoom.iml" filepath="$PROJECT_DIR$/chatRoom.iml" />
+    </modules>
+  </component>
+</project>

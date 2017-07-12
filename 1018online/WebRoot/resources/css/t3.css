@@ -1,0 +1,25 @@
+@import url(public.css);
+
+
+/*maincontent*/
+.maincontent{width:718px; float:left; background:url(../images/c1-bg04.gif) no-repeat left top #4470ae; text-align:left; padding-top:66px;}
+.maincontent .box01{ position:absolute; left:227px; top:14px; width:715px;}
+.maincontent .box01 span{ float:right; color:#b1c2da; padding-top:15px;}
+.maincontent .box01 span a{color:#b1c2da;}
+.maincontent .box01 span a:hover{ color:#ef9b11;}
+
+.maincontent .box02{ padding-left:45px; width:664px;}
+
+.maincontent .box02 h4{ font-size:14px; padding-bottom:8px;color:#fff; text-align:center;}
+
+.maincontent .box02 p{ width:620px;}
+
+
+#ee{ overflow:auto; height:356px; width:650px;}
+#ee h5{ font-size:14px; color:#c6d4e7;}
+#ee p{ color:#c6d4e7; font-size:13px; line-height:18px; text-indent:2em;}
+.jscroll-u{ background:#fff;}
+
+
+
+

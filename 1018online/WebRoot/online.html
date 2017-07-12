@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>录制窗口</title>
+
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="this is my page">
+<meta name="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+</head>
+
+<body>
+	<!-- 将摄像头与麦克风的资源采集后放到video中播放 -->
+<!-- 	video媒体播放  canvas图片采集传输-->
+	<video autoplay id="sourceid" style="width: 640px;height: 480px;"></video>
+<!-- 	                          	 相当于截屏 -->
+	<canvas id="output" style="display: none" width="640" height="480"></canvas>
+	<script type="text/javascript">
+       var client=new WebSocket("ws://"+window.location.host+"/server");
+       client.binaryType = 'arraybuffer';
+       var out=document.getElementById("output");
+       var video=document.getElementById("sourceid");
+       var fps = 24;
+       client.onopen=function(){
+         //webrtc 
+         navigator.getUserMedia=navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia|| navigator.msGetUserMedia;
+         //                      视图抓取     麦克风抓取
+         navigator.getUserMedia({video:true,audio:false},success,console.log);
+         setInterval(function(){draw();}, 100 / fps);//定时器
+       };
+       function draw(){
+    	   try {
+            var ctx = out.getContext("2d");
+            ctx.drawImage(video,0,0,out.width,out.height);
+//			client.send(out.toDataURL("image/jpeg",0.5));
+			// 直接发送二进制数据
+			console.log(out.toDataURL("image/jpeg",0.5));
+            client.send(dataURLtoBytes(out.toDataURL("image/jpeg",0.5)));
+            // 图片尺寸用的是1366*768 上面压缩过图片大小为60k左右，下面没压缩过的png大小为1.6M
+            // client.send(dataURLtoBytes(out.toDataURL()));
+			
+		} catch (e) {
+			console.log('异常信息');
+		}
+       }
+//        stream视频流
+        function success(stream){
+        	video.src=window.URL.createObjectURL(stream);
+        }
+
+       function dataURLtoBytes(dataUrl) {
+           var arr = dataUrl.split(','),
+               data = atob(arr[1]),
+               n = data.length,
+               u8arr = new Uint8Array(n);
+           while (n--) {
+               u8arr[n] = data.charCodeAt(n);
+           }
+           return u8arr;
+       }
+     
+     </script>
+	<br>
+</body>
+</html>

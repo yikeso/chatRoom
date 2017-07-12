@@ -1,0 +1,185 @@
+body{
+ 
+  background-color:White;
+ }
+ .scroll-demo{
+    width:355px;
+    border:1px solid #fff;
+    background: ;
+    margin:30px auto;
+ }
+ /*标签切换区 */
+ .scroll-tab{
+  height:36px;
+  border-bottom: 1px solid #fff;
+  
+  
+ }
+  .scroll-tab .tab-item{
+  
+    float:left;
+    font:14px/36px "Micosoft Yahei";
+    height: 36px;
+    text-align: center;
+    border-right: 1px solid #fff;
+    padding:0 19.609px;
+    cursor:pointer;
+    
+  }
+  .scroll-tab .tab-active{
+   
+   color:rgb(22,179,248);
+   background: #fff;
+  
+   border-bottom:4px solid rgb(22,179,248);
+   margin:-2px 0;
+  }
+  .tab-item .tab-blue{
+   color:#fff;
+   background: rgb(22,179,248);
+  }
+  /*滚动内容 区 */
+  .scroll-wrap{
+   position:relative;
+    width:100%;
+    height:200px ;
+    background-color: rgb(239,239,239);
+  }
+ 
+  
+ /*滚动内容  */
+ .scroll-wrap .scroll-cont{
+  height: 100%;
+  padding:0 15px;
+  overflow:hidden;
+ }
+ .scroll-wrap .scroll-cont h3{
+   font:16px/3 "Microsoft Yahei";
+   text-align: center;
+ }
+  .scroll-wrap .scroll-cont p{
+   font-size: 14px;
+   line-height: 20px;
+   text-indent:2em;
+   margin-bottom: 10px;
+   
+   
+  }
+  /*滚动条 */
+  .scroll-wrap .scroll-bar{
+   position:absolute;
+   top:0;
+   right:0;
+   width: 2px;
+   height:100%;
+   background-color: #eaeaea;
+  }
+ /*滑块样式 */
+  .scroll-wrap .scroll-slider{
+    position: absolute;
+    top: 0;
+    right: 1px;
+    width: 2px;
+    height: 30px;
+    background: rgb(22,179,248);
+    
+}
+ .scroll-ol{
+   height: 100%;
+   color:#000;
+   border: 0px solid blue;
+ }
+ 
+.scroll-ol button{
+
+	color:#fff; 
+	width: 257px;
+	border: 0px;
+	border-style:none;
+
+line-height:24px;
+color:#fff;
+font:16px "Microsoft YaHei", Verdana, Geneva, sans-serif;
+cursor:pointer;
+
+-webkit-box-shadow:inset 0px 0px 1px #fff;
+-moz-box-shadow:inset 0px 0px 1px #fff;
+box-shadow:inset 0px 0px 1px #fff;/*内发光效果*/
+-webkit-border-radius:4px;
+-moz-border-radius:4px;
+border-radius:4px;/*边框圆角*/
+
+background-color:rgb(22,179,248);
+background-image: linear-gradient(top, #feb100 0%, #e8a201 100%);/*颜色渐变效果*/
+	
+}
+
+.scroll-ol .bang{
+	padding:8px;
+	width: 100%;
+	
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+
+.scroll-send1,.scroll-send2 {
+  height:40px;
+  line-height:40px;
+  text-indent: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  background-color: rgb(239,239,239);
+}
+.scroll-send2 {
+	
+	border: none;
+	
+}
+
+.tab-send{
+  text-align:center;
+  float:left;
+  height:20px;
+  
+}
+.tab-send input{
+ border:1px solid #ccc;
+ font-size: 12px;
+ height: 30px;
+ width: 220px;
+ color:#000;
+ -moz-opacity:.5;opacity:.5;
+ filter: alpha(opacity=80);
+}
+.scroll-black{
+	background-color: #000;
+	-moz-opacity:.5;opacity:.5;
+	filter: alpha(opacity=80);
+	border:1px solid #000;
+	color:white;
+	font-size:14px;
+	text-align: center;
+}
+.zanshang{
+	
+	border: 0px solid #000;
+	height: 30px;
+	text-align: right;
+	padding-top: 5px
+}
+.count{
+	text-align: right;
+	color:red;
+	font-size:10px;
+	padding: 1px;
+}
+.zanshang{
+	position:absolute;
+	top:75px;
+	right: 14px;
+}
+.bang-item{
+	width:100%;
+	
+}
+
