@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="lib">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/1018online/WebRoot/WEB-INF/lib/fastjson-1.1.41.jar!/" />
       <root url="jar://$PROJECT_DIR$/1018online/WebRoot/WEB-INF/lib/javaee-api-7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/1018online/WebRoot/WEB-INF/lib/fastjson-1.1.41.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
